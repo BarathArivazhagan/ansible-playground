@@ -1,0 +1,18 @@
+  ---
+
+- name: create an ec2 instance with cloud module
+  gather_facts: False
+  hosts: localhost
+  tasks:
+   - name: create an ec2 instance
+     ec2:
+        key_name: barath_mac_pair
+        instance_type: t2.micro
+        image: ami-66506c1c
+        wait: yes
+        #group: webserver
+        region: us-east-1
+        count: 1
+        vpc_subnet_id: subnet-f3e487dc
+        assign_public_ip: yes
+     register: ec2
