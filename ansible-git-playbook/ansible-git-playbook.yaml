@@ -1,0 +1,7 @@
+---
+- hosts: web
+  remote_user: centos
+  tasks:
+   - name: install git latest version
+     yum: name=git state=latest
+     become: true
