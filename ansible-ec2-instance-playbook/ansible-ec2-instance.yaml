@@ -1,7 +1,7 @@
   ---
 
 - name: create an ec2 instance with cloud module
-  gather_facts: False
+  gather_facts: false
   hosts: localhost
   tasks:
    - name: create an ec2 instance
