@@ -1,4 +1,4 @@
-## Setup Ansible in Amazon Linux2 Ec2
+### Setup Ansible in Amazon Linux2 EC2
 
 
 ```ssh
