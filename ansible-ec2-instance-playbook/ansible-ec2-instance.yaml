@@ -1,5 +1,4 @@
-  ---
-
+---
 - name: create an ec2 instance with cloud module
   gather_facts: false
   hosts: localhost
@@ -10,7 +9,6 @@
         instance_type: t2.micro
         image: ami-66506c1c
         wait: yes
-        #group: webserver
         region: us-east-1
         count: 1
         vpc_subnet_id: subnet-f3e487dc
