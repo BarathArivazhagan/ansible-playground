@@ -1,0 +1,9 @@
+---
+    - name: Install openjdk java 11.0.3
+      hosts: web
+      become: true
+      tasks:
+      - name: Install Java
+        yum:
+           name:  java-11.0.3
+           state: present
