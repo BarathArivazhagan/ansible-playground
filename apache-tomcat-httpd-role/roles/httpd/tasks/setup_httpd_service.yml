@@ -1,0 +1,5 @@
+- name: enable apache http service
+  systemd:
+    name: httpd
+    state: started
+    enabled: true

@@ -1,0 +1,9 @@
+---
+- name: install httpd
+  include_tasks: setup_httpd.yml
+
+- name: configure apache httpd
+  include_tasks: configure_httpd.yml
+
+- name: configure httpd service
+  include_tasks: setup_httpd_service.yml

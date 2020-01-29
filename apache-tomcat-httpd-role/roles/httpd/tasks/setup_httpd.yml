@@ -1,0 +1,6 @@
+---
+- name: setup httpd
+  package:
+    name: httpd
+    state: present
+    enablerepo: "{{ apache_enablerepo | default(omit, true) }}"

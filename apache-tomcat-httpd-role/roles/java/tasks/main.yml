@@ -1,0 +1,5 @@
+---
+- name: install java
+  include_tasks: redhat_java.yml
+  when: ansible_distribution == 'Red Hat Enterprise Linux' or
+        ansible_distribution == 'RedHat'

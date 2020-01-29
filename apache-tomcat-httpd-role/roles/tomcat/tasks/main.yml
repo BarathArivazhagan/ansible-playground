@@ -1,0 +1,15 @@
+---
+- name: setup apache tomcat account
+  include_tasks: setup_tomcat_account.yml
+
+- name: download tomcat
+  include_tasks: download_tomcat.yml
+
+- name: configure tomcat
+  include_tasks: setup_tomcat.yml
+
+- name: configure tomcat service
+  include_tasks: setup_tomcat_service.yml
+
+- name: setup tomcat users & accounts
+  include_tasks: setup_tomcat_account.yml
