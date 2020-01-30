@@ -8,16 +8,3 @@
     name: tomcat
     state: started
     enabled: yes
-
-- name: start and enable firewalld
-  systemd:
-    name: firewalld
-    state: started
-    enabled: yes
-
-- name: open tomcat port on the firewall
-  firewalld:
-    port: 8080/tcp
-    permanent: true
-    state: enabled
-    immediate: yes
