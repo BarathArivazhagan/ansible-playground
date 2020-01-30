@@ -2,22 +2,18 @@
   template:
     src: templates/tomcat.service.j2
     dest: /etc/systemd/system/tomcat.service
-  when: ansible_service_mgr == "systemd"
 
 - name: start and enable tomcat
-  service:
-    daemon_reload: yes
+  systemd:
     name: tomcat
     state: started
     enabled: yes
-  when: ansible_service_mgr == "systemd"
 
 - name: start and enable firewalld
-  service:
+  systemd:
     name: firewalld
     state: started
     enabled: yes
-  when: ansible_service_mgr == "systemd"
 
 - name: open tomcat port on the firewall
   firewalld:
@@ -25,4 +21,3 @@
     permanent: true
     state: enabled
     immediate: yes
-  when: ansible_service_mgr == "systemd"
